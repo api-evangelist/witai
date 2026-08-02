@@ -1,0 +1,60 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://wit.ai/docs/http/latest + wit-ai SDK READMEs (node-wit, wit-go).
+  Cross-cutting request/response semantics of the Wit HTTP API. Wit.ai publishes
+  no OpenAPI, so these conventions are captured from the documented HTTP surface.
+base_url: https://api.wit.ai
+authentication:
+  style: bearer-token
+  header: 'Authorization: Bearer $SERVER_ACCESS_TOKEN'
+  ref: authentication/witai-authentication.yml
+versioning:
+  style: date
+  current: '20240304'
+  request_param: v
+  accept_header: application/vnd.wit.YYYYMMDD+json
+  ref: lifecycle/witai-lifecycle.yml
+content_types:
+  request:
+  - application/json
+  - audio/wav
+  - audio/mpeg3
+  - audio/raw
+  response:
+  - application/json
+  - audio streams (synthesize)
+  notes: >-
+    Speech / dictation / converse endpoints accept a raw audio body with a
+    Content-Type describing the encoding (e.g. audio/raw;encoding=...;bits=...;
+    rate=...;endian=...). The synthesize endpoint returns an audio stream.
+streaming:
+  supported: true
+  notes: >-
+    Speech, dictation and converse responses are chunked/streamed — SDKs surface
+    partialTranscription / partialUnderstanding / fullTranscription events as the
+    audio is processed.
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency-key header or documented idempotent-write contract. Message
+    parsing and speech are read-like/stateless; model-management writes
+    (entities/intents/traits) are not documented as idempotent.
+pagination:
+  supported: false
+  notes: >-
+    No cursor/offset pagination is documented for the management collections;
+    list endpoints (e.g. GET /entities, GET /intents) return full arrays.
+request_id_tracing:
+  supported: unknown
+error_envelope:
+  format: json
+  notes: >-
+    Errors are returned as a JSON object with an `error` message and often a
+    `code` field; HTTP status codes signal the class (400 bad request, 401
+    unauthorized, 500 server error). No RFC 9457 problem+json is used.
+rate_limiting:
+  documented: false
+  notes: >-
+    Wit.ai enforces rate limits but does not publish specific numeric limits or
+    documented rate-limit response headers.

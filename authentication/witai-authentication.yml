@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://wit.ai/docs/http/latest + wit-ai SDK READMEs (node-wit, wit-go,
+  pywit). Wit.ai publishes no OpenAPI, so this profile is captured from the
+  documented HTTP auth model rather than derived from a spec.
+docs: https://wit.ai/docs/http/latest
+summary:
+  types:
+  - http
+  api_key_in: []
+  oauth2_flows: []
+schemes:
+- name: serverAccessToken
+  type: http
+  scheme: bearer
+  bearerFormat: opaque-token
+  description: >-
+    Every Wit HTTP API request is authenticated with a Server Access Token
+    passed as an HTTP Bearer credential in the Authorization header
+    (`Authorization: Bearer $TOKEN`). Each Wit app has its own token, found in
+    the app's Settings page (wit.ai/apps → Settings). A separate Client Access
+    Token exists for lighter client-side use. Tokens are opaque and long-lived;
+    there is no OAuth 2.0 authorization flow and no scope surface — access is
+    scoped to the single Wit app the token belongs to.
+  location: header
+  parameter: Authorization
+  sources:
+  - https://wit.ai/docs/http/latest
+notes: >-
+  No OAuth2 / OpenID Connect / mTLS / API-key-in-query schemes are documented;
+  scopes/ is therefore not applicable. Token management (rotate/revoke) is done
+  in the Wit app dashboard.

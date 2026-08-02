@@ -1,0 +1,46 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: >-
+  No official / hosted Wit.ai MCP server was found (no @wit-ai MCP package, no
+  entry in the MCP registry, no docs reference). This is a CANDIDATE tool list
+  derived from the documented Wit HTTP API operations (wit.ai/docs/http/latest +
+  wit-ai SDK method surface), not a published server.
+server:
+  name: witai
+  transport: http
+  url: null
+tools:
+- name: message
+  description: Extract intents, entities and traits from a text query.
+  source_operation: GET https://api.wit.ai/message
+- name: speech
+  description: Transcribe audio and extract meaning (speech-to-text + NLU).
+  source_operation: POST https://api.wit.ai/speech
+- name: dictation
+  description: Transcribe long-form audio to text (speech-to-text only).
+  source_operation: POST https://api.wit.ai/dictation
+- name: synthesize
+  description: Synthesize speech (text-to-speech) from a text query and voice.
+  source_operation: POST https://api.wit.ai/synthesize
+- name: list_voices
+  description: List available synthesis voices and styles.
+  source_operation: GET https://api.wit.ai/voices
+- name: list_intents
+  description: List the intents defined in a Wit app.
+  source_operation: GET https://api.wit.ai/intents
+- name: list_entities
+  description: List the entities defined in a Wit app.
+  source_operation: GET https://api.wit.ai/entities
+- name: list_traits
+  description: List the traits defined in a Wit app.
+  source_operation: GET https://api.wit.ai/traits
+- name: list_utterances
+  description: List the training utterances of a Wit app.
+  source_operation: GET https://api.wit.ai/utterances
+- name: train_utterances
+  description: Add training utterances to a Wit app.
+  source_operation: POST https://api.wit.ai/utterances
+- name: export_app
+  description: Get a download URL for the app's model backup (export).
+  source_operation: GET https://api.wit.ai/export

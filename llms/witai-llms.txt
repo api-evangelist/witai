@@ -1,0 +1,39 @@
+# Wit.ai
+
+> Wit.ai is Meta's natural language processing (NLP) platform for building apps and devices you can talk or text to. It turns text and audio into structured meaning (intents, entities, traits), transcribes speech (speech-to-text / dictation), and synthesizes speech (text-to-speech). The HTTP API is authenticated with a Bearer server access token and versioned by date (current: 20240304). Wit.ai is free to use.
+
+## API
+
+- [Wit.ai HTTP API reference](https://wit.ai/docs/http/latest): base URL https://api.wit.ai — message, speech, dictation, synthesize, voices, converse/event, and app model management (entities, intents, traits, utterances, apps, export/import)
+- [Getting started / quickstart](https://wit.ai/docs/quickstart)
+- [Recipes](https://wit.ai/docs/recipes): Composer, custom context, run custom code
+
+## Auth
+
+- Bearer server access token in the Authorization header; one token per Wit app (wit.ai/apps → Settings). See authentication/witai-authentication.yml.
+
+## SDKs
+
+- [node-wit (Node.js)](https://github.com/wit-ai/node-wit) — npm: node-wit
+- [pywit (Python)](https://github.com/wit-ai/pywit) — PyPI: wit
+- [wit-ruby (Ruby)](https://github.com/wit-ai/wit-ruby) — RubyGems: wit
+- [wit-go (Go)](https://github.com/wit-ai/wit-go)
+- [wit-ios (Objective-C)](https://github.com/wit-ai/wit-ios)
+- [wit-unity (C#, Meta Voice SDK)](https://github.com/wit-ai/wit-unity)
+- [wit-unreal (C++)](https://github.com/wit-ai/wit-unreal)
+
+## Repo artifacts
+
+- [Packages / SDKs](packages/witai-packages.yml)
+- [Authentication profile](authentication/witai-authentication.yml)
+- [API conventions](conventions/witai-conventions.yml)
+- [Lifecycle / versioning](lifecycle/witai-lifecycle.yml)
+- [MCP candidate tools](mcp/witai-mcp.yml)
+- [Domain security probe](security/witai-domain-security.yml)
+
+## Company
+
+- [GitHub organization](https://github.com/wit-ai)
+- [Terms of Use](https://opensource.facebook.com/legal/terms)
+- [Privacy Policy](https://opensource.facebook.com/legal/privacy)
+- Backed by a16z; acquired by Facebook (Meta) in 2015

@@ -1,7 +1,30 @@
 aid: witai
 name: Wit.AI
-description: Wit.AI is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Wit.ai is a natural language processing (NLP) platform from Meta that lets
+  developers build applications and devices you can talk or text to. It turns
+  spoken or written user input into structured, machine-readable data —
+  extracting intents, entities, and traits — and provides speech recognition
+  (speech-to-text), dictation, and speech synthesis (text-to-speech).
+  Developers train an app with example utterances, then call the Wit HTTP API
+  with a Bearer server access token to parse messages, transcribe audio, and
+  manage an app's entities, intents, traits, and utterances. Wit.ai is free to
+  use and ships official client SDKs for Node.js, Python, Ruby, Go, iOS, Unity,
+  and Unreal. It was founded in 2013, backed by a16z, and acquired by Facebook
+  (now Meta) in 2015.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/4723433?v=4
 url: https://raw.githubusercontent.com/api-evangelist/witai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +34,85 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Natural Language Processing
+- NLP
+- Speech Recognition
+- Speech to Text
+- Text to Speech
+- Intents
+- Entities
+- Voice
+- Conversational AI
+- Machine Learning
+- Meta
+apis:
+- name: Wit.ai HTTP API
+  description: >-
+    The Wit.ai HTTP API extracts structured meaning (intents, entities, traits)
+    from text and audio, transcribes speech (speech / dictation), synthesizes
+    speech (text-to-speech), and manages an app's NLP model (entities, intents,
+    traits, utterances, apps, export/import). Authenticated with a Bearer server
+    access token and versioned by date (current: 20240304).
+  humanURL: https://wit.ai/docs/http/latest
+  baseURL: https://api.wit.ai
+  tags:
+  - Natural Language Processing
+  - Speech
+  - NLP
+  properties:
+  - type: APIReference
+    url: https://wit.ai/docs/http/latest
+  - type: Authentication
+    url: authentication/witai-authentication.yml
+  - type: Conventions
+    url: conventions/witai-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/witai-lifecycle.yml
+  - type: MCPServer
+    url: mcp/witai-mcp.yml
+common:
+- type: DeveloperPortal
+  url: https://wit.ai
+- type: Documentation
+  url: https://wit.ai/docs
+- type: APIReference
+  url: https://wit.ai/docs/http/latest
+- type: GettingStarted
+  url: https://wit.ai/docs/quickstart
+- type: GitHubOrganization
+  url: https://github.com/wit-ai
+- type: SignUp
+  url: https://wit.ai/apps
+- type: TermsOfService
+  url: https://opensource.facebook.com/legal/terms
+- type: PrivacyPolicy
+  url: https://opensource.facebook.com/legal/privacy
+- type: Packages
+  url: packages/witai-packages.yml
+- type: SDKs
+  url: packages/witai-packages.yml
+- type: Authentication
+  url: authentication/witai-authentication.yml
+- type: Conventions
+  url: conventions/witai-conventions.yml
+- type: Lifecycle
+  url: lifecycle/witai-lifecycle.yml
+- type: DomainSecurity
+  url: security/witai-domain-security.yml
+- type: MCPServer
+  url: mcp/witai-mcp.yml
+- type: LLMsTxt
+  url: llms/witai-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v1

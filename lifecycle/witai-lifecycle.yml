@@ -1,0 +1,37 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://wit.ai/docs/http/latest + wit-ai SDK READMEs. Wit.ai versions its HTTP
+  API by date rather than by URI path.
+versioning:
+  scheme: date
+  current: '20240304'
+  mechanism: >-
+    The API version is a date string (YYYYMMDD). Clients pin it per request via
+    the `v` query parameter (e.g. `?v=20240304`) or an Accept header
+    (`application/vnd.wit.YYYYMMDD+json`). Omitting it uses the SDK's recommended
+    default. There is no version in the URL path.
+  docs: https://wit.ai/docs/http/latest
+deprecation:
+  policy_url: https://wit.ai/docs/http/latest
+  sunset_header: unknown
+  notes: >-
+    Wit.ai does not publish a formal dated deprecation policy or RFC 8594
+    Sunset-header support that could be verified. However, the /converse and
+    /event conversation endpoints are documented as superseded — the SDKs
+    (node-wit) explicitly recommend the Composer flows (runComposer /
+    runComposerAudio) over the raw converse/event APIs.
+deprecated_endpoints:
+- endpoint: POST /converse
+  status: superseded
+  replacement: Composer (runComposer / runComposerAudio)
+- endpoint: POST /event
+  status: superseded
+  replacement: Composer (runComposer / runComposerAudio)
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+notes: >-
+  No public status page or published SLA was found for Wit.ai (it is a free Meta
+  developer product); absence recorded, not fabricated.

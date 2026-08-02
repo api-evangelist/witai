@@ -1,0 +1,61 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  GitHub org github.com/wit-ai + npm/PyPI/RubyGems/pkg.go.dev registry lookups
+notes: >-
+  All packages below are published under the official Meta wit-ai GitHub
+  organization. The dynamic-language SDKs (Node.js, Python, Ruby, Go) call the
+  Wit HTTP API directly; the platform SDKs (iOS, Unity, Unreal) wrap the same
+  REST API for on-device / game-engine voice experiences (Meta Voice SDK).
+packages:
+- language: javascript
+  registry: npm
+  name: node-wit
+  version: 6.6.0
+  url: https://www.npmjs.com/package/node-wit
+  repository: https://github.com/wit-ai/node-wit
+  install: npm install --save node-wit
+  official: true
+- language: python
+  registry: pypi
+  name: wit
+  version: 6.0.1
+  url: https://pypi.org/project/wit/
+  repository: https://github.com/wit-ai/pywit
+  install: pip install wit
+  official: true
+- language: ruby
+  registry: rubygems
+  name: wit
+  version: 7.0.1
+  url: https://rubygems.org/gems/wit
+  repository: https://github.com/wit-ai/wit-ruby
+  install: gem install wit
+  official: true
+- language: go
+  registry: pkg.go.dev
+  name: github.com/wit-ai/wit-go/v2
+  url: https://pkg.go.dev/github.com/wit-ai/wit-go/v2
+  repository: https://github.com/wit-ai/wit-go
+  install: go get -u github.com/wit-ai/wit-go/v2
+  official: true
+  community_maintained: true
+- language: objective-c
+  registry: github
+  name: wit-ios
+  url: https://github.com/wit-ai/wit-ios
+  repository: https://github.com/wit-ai/wit-ios
+  official: true
+- language: csharp
+  registry: github
+  name: wit-unity
+  url: https://github.com/wit-ai/wit-unity
+  repository: https://github.com/wit-ai/wit-unity
+  install: Unity Package Manager (Meta Voice SDK)
+  official: true
+- language: cpp
+  registry: github
+  name: wit-unreal
+  url: https://github.com/wit-ai/wit-unreal
+  repository: https://github.com/wit-ai/wit-unreal
+  official: true
