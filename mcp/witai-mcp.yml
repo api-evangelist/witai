@@ -1,11 +1,9 @@
 generated: '2026-07-21'
 method: derived
 status: candidate
-source: >-
-  No official / hosted Wit.ai MCP server was found (no @wit-ai MCP package, no
-  entry in the MCP registry, no docs reference). This is a CANDIDATE tool list
-  derived from the documented Wit HTTP API operations (wit.ai/docs/http/latest +
-  wit-ai SDK method surface), not a published server.
+source: No official / hosted Wit.ai MCP server was found (no @wit-ai MCP package, no entry in the MCP
+  registry, no docs reference). This is a CANDIDATE tool list derived from the documented Wit HTTP API
+  operations (wit.ai/docs/http/latest + wit-ai SDK method surface), not a published server.
 server:
   name: witai
   transport: http
@@ -44,3 +42,9 @@ tools:
 - name: export_app
   description: Get a download URL for the app's model backup (export).
   source_operation: GET https://api.wit.ai/export
+deployment:
+  mode: none
+  verified: derived
+  tools: 11
+  checked: '2026-08-12'
+  source: catalog MCP census
