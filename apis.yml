@@ -12,6 +12,17 @@ description: >-
   use and ships official client SDKs for Node.js, Python, Ruby, Go, iOS, Unity,
   and Unreal. It was founded in 2013, backed by a16z, and acquired by Facebook
   (now Meta) in 2015.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
