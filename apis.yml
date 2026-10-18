@@ -50,7 +50,6 @@ modified: '2026-10-06'
 tags:
 - Company
 - Natural Language Processing
-- NLP
 - Speech Recognition
 - Speech-to-Text
 - Text-to-Speech
@@ -85,6 +84,9 @@ apis:
   humanURL: https://wit.ai/docs/http/latest
   baseURL: https://api.wit.ai
   tags:
+  - Natural Language Processing
+  - Speech
+  tags_raw:
   - Natural Language Processing
   - Speech
   - NLP
